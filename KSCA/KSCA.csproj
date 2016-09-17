@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69F1E912-5B04-469E-8871-FB2D138BBF48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KSCA</RootNamespace>
+    <AssemblyName>KSCA</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KCSA_Deployment.cs" />
+    <Compile Include="KSCA_CertPoolCtrl.cs" />
+    <Compile Include="KSCA_AdHosts.cs" />
+    <Compile Include="KSCA_Base.cs" />
+    <Compile Include="KSCA_ChunkAccessor.cs" />
+    <Compile Include="KSCA_Collection.cs" />
+    <Compile Include="KSCA_Events.cs" />
+    <Compile Include="KSCA_Gcm.cs" />
+    <Compile Include="KSCA_Groups.cs" />
+    <Compile Include="KSCA_HostAffectivePolicy.cs" />
+    <Compile Include="KSCA_Hosts.cs" />
+    <Compile Include="KSCA_Hosts2.cs" />
+    <Compile Include="KSCA_HstIncidents.cs" />
+    <Compile Include="KSCA_HstRulesEx.cs" />
+    <Compile Include="KSCA_IpConversions.cs" />
+    <Compile Include="KSCA_IpSubnets.cs" />
+    <Compile Include="KSCA_License.cs" />
+    <Compile Include="KSCA_License2.cs" />
+    <Compile Include="KSCA_LicHst.cs" />
+    <Compile Include="KSCA_NetworkListProxy.cs" />
+    <Compile Include="KSCA_NotificationProperties.cs" />
+    <Compile Include="KSCA_Packages.cs" />
+    <Compile Include="KSCA_Packages2.cs" />
+    <Compile Include="KSCA_Packages3.cs" />
+    <Compile Include="KSCA_Packages4.cs" />
+    <Compile Include="KSCA_Params.cs" />
+    <Compile Include="KSCA_Policies.cs" />
+    <Compile Include="KSCA_Policies2.cs" />
+    <Compile Include="KSCA_PolicyProfiles.cs" />
+    <Compile Include="KSCA_Proxy.cs" />
+    <Compile Include="KSCA_Reports.cs" />
+    <Compile Include="KSCA_SecurityGroups.cs" />
+    <Compile Include="KSCA_SecurityGroups2.cs" />
+    <Compile Include="KSCA_Servers.cs" />
+    <Compile Include="KSCA_Servers2.cs" />
+    <Compile Include="KSCA_Servers3.cs" />
+    <Compile Include="KSCA_SettingsStorage.cs" />
+    <Compile Include="KSCA_SlaveServers.cs" />
+    <Compile Include="KSCA_SrvObject.cs" />
+    <Compile Include="KSCA_SrvStatistics.cs" />
+    <Compile Include="KSCA_SrvStatistics2.cs" />
+    <Compile Include="KSCA_SrvView.cs" />
+    <Compile Include="KSCA_Statistics.cs" />
+    <Compile Include="KSCA_TagsControl.cs" />
+    <Compile Include="KSCA_Tasks.cs" />
+    <Compile Include="KSCA_Tasks2.cs" />
+    <Compile Include="KSCA_Tasks3.cs" />
+    <Compile Include="KSCA_Tunnel.cs" />
+    <Compile Include="KSCA_Tunnels.cs" />
+    <Compile Include="KSCA_UpdateAgents.cs" />
+    <Compile Include="KSCA_UserDevices.cs" />
+    <Compile Include="KSCA_UserDevices2.cs" />
+    <Compile Include="KSCA_UserList.cs" />
+    <Compile Include="KSCA_Users.cs" />
+    <Compile Include="KSCA_Users2.cs" />
+    <Compile Include="KSCA_VapmCtrl.cs" />
+    <Compile Include="KSCA_WebUsers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="KLAKAUTLib">
+      <Guid>{709B4591-AA68-4DD9-8C96-7FD62C5A9EC5}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
