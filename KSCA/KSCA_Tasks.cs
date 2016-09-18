@@ -6,7 +6,18 @@ using KLAKAUTLib;
 
 namespace KSCA
 {
-    class KSCA_Tasks
+    public class KSCA_Tasks
     {
+        private KlAkProxy proxy;
+        private KlAkTasks tasks;
+        public KSCA_Tasks(KlAkProxy proxy)
+        {
+            this.proxy = proxy;
+
+            tasks = new KlAkTasks();
+
+            tasks.AdmServer = proxy;
+        }
+
     }
 }
